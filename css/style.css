@@ -1,0 +1,246 @@
+body, html, * {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1, .h1 {
+  font-family: 'DM Serif Display', 'DM Serif Text', serif;
+  font-size: 3em;
+  line-height: 1.2em;
+  margin: 0 0 0.5em 0;
+  color: #0a3b59;
+}
+h2, h3, h4, h5, h6 {
+  font-family: 'DM Serif Text', serif;
+  line-height: 1.2em;
+  /*margin: 1em 0 0.5em 0;*/
+  margin: 0 0 0.5em 0;
+  color: #0a3b59;
+}
+h2, .h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.8em;
+}
+h5 {
+  font-size: 1.5em;
+}
+h6 {
+  font-size: 1.2em;
+}
+p {
+  line-height: 1.3em;
+  margin-bottom: 1em;
+}
+a {
+  color: #833e8c;
+}
+ul {
+  padding-left: 1em;
+}
+img {
+  max-width: 100%;
+}
+.textright {text-align: right;}
+.textleft {text-align: left;}
+.textcenter {text-align: center;}
+.inlineblock {display: inline-block;}
+.button {
+  background-color: #844e8c;
+  color: #fff;
+  padding: 0.5em;
+  display: inline-block;
+  margin: 0 0.5em 0.5em 0;
+  text-decoration: none;
+}
+.worktitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: inline-block;
+}
+.circleimg {
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+#herologo {grid-area: herologo;}
+#herotext {grid-area: herotext;}
+#titles {grid-area: titles;}
+#aboutme {grid-area: aboutme;}
+#example1 {grid-area: example1;}
+#example2 {grid-area: example2;}
+#example3 {grid-area: example3;}
+#contact {grid-area: contact;}
+#empty1 {grid-area: empty1;}
+#empty2 {grid-area: empty2;}
+#examples {grid-area: examples;}
+#examplespacer1 {grid-area: examplespacer1;}
+#examplespacer2 {grid-area: examplespacer2;}
+#main {
+  display: grid;
+  grid-template-areas: 'herologo herologo herologo herologo herologo herologo herotext herotext herotext herotext herotext herotext'
+  'titles titles titles titles titles aboutme aboutme aboutme aboutme aboutme aboutme aboutme'
+  'examples examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer2 examplespacer2 examplespacer2 examplespacer2'
+  'example1 example1 example1 example1 example2 example2 example2 example2 example3 example3 example3 example3'
+  'contact contact contact contact contact contact empty2 empty2 empty2 empty2 empty2 empty2'
+}
+.gridcenter {
+  display: grid;
+  align-content: center;
+}
+.space {
+  padding: 3em;
+}
+.color1 {
+  background-color: #4ad97c;
+}
+.color2 {
+  background-color: #f28f79;
+}
+.color3 {
+  background-color: #0a3b59;
+}
+.color4 {
+  background-color: #50bf80;
+}
+.color5 {
+  background-color: #833e8c;
+}
+
+header {
+  padding: 1em 0;
+}
+#nav, #innerfooter {
+  position: relative;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#nav-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 3em;
+}
+#nav-menu {
+  display: none;
+  height: 3em;
+  padding: 0.5em;
+  margin: 0 0 0 auto;
+}
+#nav-list {
+  text-align: center;
+  padding: 0;
+}
+#nav-list li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: middle;
+  padding: 1em;
+}
+#nav-list li a {
+  color: #0a3b59;
+  text-decoration: none;
+}
+
+#herologo, #herotext {
+  height: 70vh;
+}
+#logo {
+  max-height: 260px;
+}
+
+#examples, #examplespacer2, .examplebox:nth-child(2n) {
+  background-color: #4ad97c;
+}
+#examplespacer1, .examplebox:nth-child(2n - 1) {
+  background-color: #f28f79;
+}
+#examples .space {padding-bottom:0;}
+
+footer {
+  padding: 1em 0;
+  background-color: #0a3b59;
+  color: #fff;
+}
+footer p {
+  color: #fff;
+}
+
+@media (min-width: 1400px) {
+  .space {padding: 4em;}
+}
+@media (max-width: 900px) {
+  #main {
+    grid-template-areas: 'herologo herologo herologo herologo herologo herologo herotext herotext herotext herotext herotext herotext'
+    'titles titles titles aboutme aboutme aboutme aboutme aboutme aboutme aboutme aboutme aboutme'
+    'examples examples examples examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer1'
+    'example1 example1 example1 example1 example1 example1 example2 example2 example2 example2 example2 example2'
+    'example3 example3 example3 example3 example3 example3 empty1 empty1 empty1 empty1 empty1 empty1'
+    'empty2 empty2 empty2 empty2 empty2 empty2 contact contact contact contact contact contact'
+  }
+  #herologo, #herotext {
+    height: 50vh;
+  }
+
+  #examples, #examplespacer2, .examplebox:nth-child(4n), .examplebox:nth-child(4n - 1) {
+    background-color: #4ad97c;
+  }
+  #examplespacer1, .examplebox:nth-child(4n - 2), .examplebox:nth-child(4n - 3) {
+    background-color: #f28f79;
+  }
+}
+@media (max-width: 600px) {
+  #nav {
+    text-align: right;
+  }
+  #nav-list {
+    display: none;
+    background-color: #0a3b59;
+    position: absolute;
+    top: 3em;
+    right: 0;
+  }
+  #nav-list li {
+    display: block;
+  }
+  #nav-list li a {
+    color: #fff;
+  }
+  #nav-menu {
+    display: inline-block;
+  }
+
+  #main {
+    grid-template-areas: 'herologo'
+    'herotext'
+    'aboutme'
+    'titles'
+    'examples'
+    'example1'
+    'example2'
+    'example3'
+    'contact'
+  }
+  #herologo, #herotext {
+    height: auto;
+  }
+  #examples, #examplespacer2, .examplebox:nth-child(2n) {
+    background-color: #4ad97c;
+  }
+  #examplespacer1, .examplebox:nth-child(2n - 1) {
+    background-color: #f28f79;
+  }
+}
