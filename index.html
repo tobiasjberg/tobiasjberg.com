@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Tobias Berg, Web Developer</title>
-    <!-- Global site tag (gtag.js) - Google Analytics
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160262845-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,25 +16,40 @@
         gtag('js', new Date());
         gtag('config', 'UA-160262845-1');
     </script>
-commented out for stage -->
+
 </head>
 <body>
-    <div id="fullwrap">
+    <div id="fullwrap" class="colorscheme1">
         <header id="header" class="color4">
             <nav id="nav">
-                <img src="images/initials.png" id="nav-logo" alt="TJB">
+                <!-- <img src="images/initials.png" id="nav-logo" alt="TJB"> -->
+                <!-- <svg id="nav-logo" class="svglogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 176">
+                    <path d=" M 10.35 79.723 C 16.794 79.723 20.378 79.839 26.861 79.723 C 78.338 72.223 170.608 49.723 261.906 18.723" />
+                    <path d=" M 92.907 66.723 C 95.942 113.973 85.501 142.473 80.281 165.723" />
+                    <path d=" M 192.947 40.723 C 201.809 59.973 209.418 73.652 210.429 90.723 C 211.036 100.973 211.322 114.991 206.544 125.723 C 205.209 128.723 195.86 153.223 178.378 158.723 C 171.87 160.771 164.722 158.206 158.953 153.723 C 153.697 149.64 151.668 142.723 149.24 137.723" />
+                    <path d=" M 262.877 137.723 C 262.876 137.96 272.469 142.973 290.942 137.723 C 303.571 134.134 338.029 121.223 346.406 102.723 C 349.746 95.346 352.355 87.973 344.463 78.723 C 331.746 63.816 301.725 55.9 300.756 54.723 C 299.831 53.598 299.522 51.161 299.785 50.723 C 305.491 41.223 317.589 43.779 326.009 37.723 C 331.176 34.007 336.142 31.906 339.607 25.723 C 341.428 22.473 339.854 17.436 336.693 15.723 C 325.159 9.473 319.786 9.941 307.555 10.723 C 285.765 12.118 261.388 17.173 261.906 18.723 C 278.782 69.223 262.999 108.973 262.877 137.723 Z " />
+                </svg> -->
                 <ul id="nav-list">
-                    <li><a href="#aboutme">What I Can Do</a></li>
+                    <li><a href="#aboutme">About</a></li>
                     <li><a href="#examples">Examples</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="javascript:;" id="ccsbtn">Change Color Scheme</a></li>
+                    <li><a href="https://github.com/tobiasjberg/tobiasjberg.com">View on GitHub</a></li>
                 </ul>
                 <img src="images/menu.png" id="nav-menu" alt="Menu">
             </nav>
         </header>
         <main id="main">
             <div id="herologo" class="gridcenter color1 textcenter">
-                <div class="space">
-                    <object id="logo" type="image/svg+xml" data="images/initials.svg"></object>
+                <div class="space textright">
+                    <div>
+                        <svg id="logo" class="svglogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 360 176">
+                            <path d=" M 10.35 79.723 C 16.794 79.723 20.378 79.839 26.861 79.723 C 78.338 72.223 170.608 49.723 261.906 18.723" />
+                            <path d=" M 92.907 66.723 C 95.942 113.973 85.501 142.473 80.281 165.723" />
+                            <path d=" M 192.947 40.723 C 201.809 59.973 209.418 73.652 210.429 90.723 C 211.036 100.973 211.322 114.991 206.544 125.723 C 205.209 128.723 195.86 153.223 178.378 158.723 C 171.87 160.771 164.722 158.206 158.953 153.723 C 153.697 149.64 151.668 142.723 149.24 137.723" />
+                            <path d=" M 262.877 137.723 C 262.876 137.96 272.469 142.973 290.942 137.723 C 303.571 134.134 338.029 121.223 346.406 102.723 C 349.746 95.346 352.355 87.973 344.463 78.723 C 331.746 63.816 301.725 55.9 300.756 54.723 C 299.831 53.598 299.522 51.161 299.785 50.723 C 305.491 41.223 317.589 43.779 326.009 37.723 C 331.176 34.007 336.142 31.906 339.607 25.723 C 341.428 22.473 339.854 17.436 336.693 15.723 C 325.159 9.473 319.786 9.941 307.555 10.723 C 285.765 12.118 261.388 17.173 261.906 18.723 C 278.782 69.223 262.999 108.973 262.877 137.723 Z " />
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div id="herotext" class="gridcenter color2">
@@ -75,7 +90,7 @@ commented out for stage -->
             <div id="example1" class="examplebox">
                 <div class="space">
                     <a href="https://alice.reecenichols.com/" target="_blank" class="worktitle">ALICE Preview</a>
-                    <p>The brokerage worked with a third-party vendor to provide automated marketing materials to our agents, triggered by the agents getting a new home to sell.</p>
+                    <p>The brokerage worked with a third-party vendor to provide automated marketing materials to our agents, triggered by the agents getting a new home to sell. I designed and created a landing page for agents to get a preview of the new product.</p>
                     <a href="https://alice.reecenichols.com/" target="_blank" class="button linktowork">Take a Look</a>
                     <!-- <a href="" class="button linkreadmore">Read My Notes</a> -->
                 </div>
@@ -83,17 +98,16 @@ commented out for stage -->
             <div id="example2" class="examplebox">
                 <div class="space">
                     <a href="https://www.reecenichols.com/pages/find-your-home/mobile-search" target="_blank" class="worktitle">Mobile App Landing Page</a>
-                    <p>I designed a page to mimick the app details page, using the similar design elements from both major mobile application stores. The goal was to give a familiar page about our mobile app to a user of any mobile device.</p>
+                    <p>I designed a page to mimic the app details page, using the similar design elements from both major mobile application stores. The goal was to give a familiar page about our mobile app to a user of any mobile device.</p>
                     <a href="https://www.reecenichols.com/pages/find-your-home/mobile-search" target="_blank" class="button linktowork">Take a Look</a>
                     <!-- <a href="" class="button linkreadmore">Read My Notes</a> -->
                 </div>
             </div>
             <div id="example3" class="examplebox">
                 <div class="space">
-                    <a href="https://claire.reecenichols.com/" class="worktitle">Claire McCurdy's Website</a>
-                    <p>Part of my job is to assist agents in updating their websites. Claire has provided me some great input for the content for her subdomain.</p>
-                    <a href="https://claire.reecenichols.com/" target="_blank" class="button linktowork">Take a Look</a>
-                    <a href="" target="_blank" class="button linktowork">Default</a>
+                    <a href="https://www.reecenichols.com/pages/where-are-you-headed-next" class="worktitle">Where Are You Headed Next? Campaign Page</a>
+                    <p>For this campaign, which was centered around selfie videos, I custom created a lightbox carousel to display the videos, which were originally going to be a combination of portrait and landscape orientations.</p>
+                    <a href="https://www.reecenichols.com/pages/where-are-you-headed-next" target="_blank" class="button linktowork">Take a Look</a>
                     <!-- <a href="" class="button linkreadmore">Read My Notes</a> -->
                 </div>
             </div>
