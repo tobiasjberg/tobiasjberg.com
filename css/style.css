@@ -11,35 +11,44 @@ h1, .h1 {
   font-size: 3em;
   line-height: 1.2em;
   margin: 0 0 0.5em 0;
+}
+.colorscheme1 h1, .colorscheme1 h2, .colorscheme1 h3, .colorscheme1 h4, .colorscheme1 h5, .colorscheme1 h6, .colorscheme1 .h1, .colorscheme1 .h2, .colorscheme1 .h3, .colorscheme1 .h4, .colorscheme1 .h5, .colorscheme1 .h6 {
+  color: #0f5fa6;
+}
+.colorscheme2 h1, .colorscheme2 h2, .colorscheme2 h3, .colorscheme2 h4, .colorscheme2 h5, .colorscheme2 h6, .colorscheme2 .h1, .colorscheme2 .h2, .colorscheme2 .h3, .colorscheme2 .h4, .colorscheme2 .h5, .colorscheme2 .h6 {
+  color: #0a0a0a;
+}
+.colorscheme3 h1, .colorscheme3 h2, .colorscheme3 h3, .colorscheme3 h4, .colorscheme3 h5, .colorscheme3 h6, .colorscheme3 .h1, .colorscheme3 .h2, .colorscheme3 .h3, .colorscheme3 .h4, .colorscheme3 .h5, .colorscheme3 .h6 {
   color: #0a3b59;
 }
 h2, h3, h4, h5, h6 {
   font-family: 'DM Serif Text', serif;
   line-height: 1.2em;
-  /*margin: 1em 0 0.5em 0;*/
   margin: 0 0 0.5em 0;
-  color: #0a3b59;
 }
 h2, .h2 {
   font-size: 2.5em;
 }
-h3 {
+h3, .h3 {
   font-size: 2em;
 }
-h4 {
+h4, .h4 {
   font-size: 1.8em;
 }
-h5 {
+h5, .h5 {
   font-size: 1.5em;
 }
-h6 {
+h6, .h6 {
   font-size: 1.2em;
 }
 p {
   line-height: 1.3em;
   margin-bottom: 1em;
 }
-a {
+.colorscheme1 a, .colorscheme2 a {
+  color: #9c0d0d;
+}
+.colorscheme3 a {
   color: #833e8c;
 }
 ul {
@@ -53,12 +62,18 @@ img {
 .textcenter {text-align: center;}
 .inlineblock {display: inline-block;}
 .button {
-  background-color: #844e8c;
-  color: #fff;
   padding: 0.5em;
   display: inline-block;
   margin: 0 0.5em 0.5em 0;
   text-decoration: none;
+}
+.colorscheme1 .button, .colorscheme2 .button {
+  background-color: #9c0d0d;
+  color: #fff;
+}
+.colorscheme3 .button {
+  background-color: #844e8c;
+  color: #fff;
 }
 .worktitle {
   font-size: 1.2em;
@@ -90,6 +105,7 @@ img {
 #examplespacer2 {grid-area: examplespacer2;}
 #main {
   display: grid;
+  grid-template-columns: calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12);
   grid-template-areas: 'herologo herologo herologo herologo herologo herologo herotext herotext herotext herotext herotext herotext'
   'titles titles titles titles titles aboutme aboutme aboutme aboutme aboutme aboutme aboutme'
   'examples examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer2 examplespacer2 examplespacer2 examplespacer2'
@@ -103,19 +119,49 @@ img {
 .space {
   padding: 3em;
 }
-.color1 {
+.colorscheme1 .color1 {
+  background-color: #fff;
+}
+.colorscheme1 .color2 {
+  background-color: #85c8f2;
+}
+.colorscheme1 .color3 {
+  background-color: #0f5fa6;
+}
+.colorscheme1 .color4 {
+  background-color: #1ba0f2;
+}
+.colorscheme1 .color5 {
+  background-color: #f2811d;
+}
+.colorscheme2 .color1 {
+  background-color: #1ba0f2;
+}
+.colorscheme2 .color2 {
+  background-color: #f2811d;
+}
+.colorscheme2 .color3 {
+  background-color: #0f5fa6;
+}
+.colorscheme2 .color4 {
+  background-color: #85c8f2;
+}
+.colorscheme2 .color5 {
+  background-color: #f26666;
+}
+.colorscheme3 .color1 {
   background-color: #4ad97c;
 }
-.color2 {
+.colorscheme3 .color2 {
   background-color: #f28f79;
 }
-.color3 {
+.colorscheme3 .color3 {
   background-color: #0a3b59;
 }
-.color4 {
+.colorscheme3 .color4 {
   background-color: #50bf80;
 }
-.color5 {
+.colorscheme3 .color5 {
   background-color: #833e8c;
 }
 
@@ -151,8 +197,13 @@ header {
   padding: 1em;
 }
 #nav-list li a {
-  color: #0a3b59;
   text-decoration: none;
+}
+.colorscheme1 #nav-list li a, .colorscheme2 #nav-list li a {
+  color: #0a0a0a;
+}
+.colorscheme3 #nav-list li a {
+  color: #0a3b59;
 }
 
 #herologo, #herotext {
@@ -161,22 +212,64 @@ header {
 #logo {
   max-height: 260px;
 }
+.svglogo path {
+  vector-effect: non-scaling-stroke;
+  stroke-width: 12;
+  stroke-linejoin: miter;
+  stroke-linecap: round;
+  stroke-miterlimit: 3;
+}
+.colorscheme1 .svglogo path {
+  fill: none;
+  stroke: #E71313;
+}
+.colorscheme2 .svglogo path {
+  fill: none;
+  stroke: #0a0a0a;
+}
+.colorscheme3 .svglogo path {
+  fill: none;
+  stroke: #0a3b59;
+}
 
-#examples, #examplespacer2, .examplebox:nth-child(2n) {
+.colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(2n) {
+  background-color: #fff;
+}
+.colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(2n) {
+  background-color: #1ba0f2;
+}
+.colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(2n) {
   background-color: #4ad97c;
 }
-#examplespacer1, .examplebox:nth-child(2n - 1) {
+.colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(2n - 1) {
+  background-color: #85c8f2;
+}
+.colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(2n - 1) {
+  background-color: #f2811d;
+}
+.colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(2n - 1) {
   background-color: #f28f79;
 }
 #examples .space {padding-bottom:0;}
 
 footer {
   padding: 1em 0;
-  background-color: #0a3b59;
   color: #fff;
 }
-footer p {
+.colorscheme1 footer {
+  background-color: #0f5fa6;  
+}
+.colorscheme2 footer {
+  background-color: #f26666;  
+}
+.colorscheme3 footer {
+  background-color: #0a3b59;  
+}
+.colorscheme1 footer p, .colorscheme3 footer p {
   color: #fff;
+}
+.colorscheme2 footer p {
+  color: #0a0a0a;
 }
 
 @media (min-width: 1400px) {
@@ -195,10 +288,22 @@ footer p {
     height: 50vh;
   }
 
-  #examples, #examplespacer2, .examplebox:nth-child(4n), .examplebox:nth-child(4n - 1) {
+  .colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(4n), .colorscheme1 .examplebox:nth-child(4n - 1) {
+    background-color: #fff;
+  }
+  .colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(4n), .colorscheme2 .examplebox:nth-child(4n - 1) {
+    background-color: #1ba0f2;
+  }
+  .colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(4n), .colorscheme3 .examplebox:nth-child(4n - 1) {
     background-color: #4ad97c;
   }
-  #examplespacer1, .examplebox:nth-child(4n - 2), .examplebox:nth-child(4n - 3) {
+  .colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(4n - 2), .colorscheme1 .examplebox:nth-child(4n - 3) {
+    background-color: #85c8f2;
+  }
+  .colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(4n - 2), .colorscheme2 .examplebox:nth-child(4n - 3) {
+    background-color: #f2811d;
+  }
+  .colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(4n - 2), .colorscheme3 .examplebox:nth-child(4n - 3) {
     background-color: #f28f79;
   }
 }
@@ -208,15 +313,20 @@ footer p {
   }
   #nav-list {
     display: none;
-    background-color: #0a3b59;
     position: absolute;
     top: 3em;
     right: 0;
   }
+  .colorscheme1 #nav-list, .colorscheme2 #nav-list {
+    background-color: #0f5fa6;
+  }
+  .colorscheme3 #nav-list {
+    background-color: #0a3b59;
+  }
   #nav-list li {
     display: block;
   }
-  #nav-list li a {
+  .colorscheme1 #nav-list li a, .colorscheme2 #nav-list li a, .colorscheme3 #nav-list li a {
     color: #fff;
   }
   #nav-menu {
@@ -237,10 +347,22 @@ footer p {
   #herologo, #herotext {
     height: auto;
   }
-  #examples, #examplespacer2, .examplebox:nth-child(2n) {
+  .colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(2n) {
+    background-color: #fff;
+  }
+  .colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(2n) {
+    background-color: #85c8f2;
+  }
+  .colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(2n) {
     background-color: #4ad97c;
   }
-  #examplespacer1, .examplebox:nth-child(2n - 1) {
+  .colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(2n - 1) {
+    background-color: #85c8f2;
+  }
+  .colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(2n - 1) {
+    background-color: #f2811d;
+  }
+  .colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(2n - 1) {
     background-color: #f28f79;
   }
 }
