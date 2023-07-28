@@ -94,6 +94,7 @@ img {
 #herotext {grid-area: herotext;}
 #titles {grid-area: titles;}
 #aboutme {grid-area: aboutme;}
+#example0 {grid-area: example0;}
 #example1 {grid-area: example1;}
 #example2 {grid-area: example2;}
 #example3 {grid-area: example3;}
@@ -103,13 +104,14 @@ img {
 #examples {grid-area: examples;}
 #examplespacer1 {grid-area: examplespacer1;}
 #examplespacer2 {grid-area: examplespacer2;}
+#examplespacer3 {grid-area: examplespacer3;}
 #main {
   display: grid;
   grid-template-columns: calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12) calc(100% / 12);
   grid-template-areas: 'herologo herologo herologo herologo herologo herologo herotext herotext herotext herotext herotext herotext'
   'titles titles titles titles titles aboutme aboutme aboutme aboutme aboutme aboutme aboutme'
-  'examples examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer2 examplespacer2 examplespacer2 examplespacer2'
-  'example1 example1 example1 example1 example2 example2 example2 example2 example3 example3 example3 example3'
+  'examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer2 examplespacer2 examplespacer2 examplespacer3 examplespacer3 examplespacer3'
+  'example0 example0 example0 example1 example1 example1 example2 example2 example2 example3 example3 example3'
   'contact contact contact contact contact contact empty2 empty2 empty2 empty2 empty2 empty2'
 }
 .gridcenter {
@@ -212,6 +214,9 @@ header {
 #herologo, #herotext {
   height: 70vh;
 }
+.heroimage {
+  max-height: calc(70vh - 6rem)
+}
 #logo {
   max-height: 260px;
 }
@@ -235,23 +240,29 @@ header {
   stroke: #0a3b59;
 }
 
-.colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(2n) {
+.colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(2n - 1) {
   background-color: #fff;
+  /* background-color: #85c8f2; */
 }
-.colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(2n) {
+.colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(2n - 1) {
   background-color: #1ba0f2;
+  /* background-color: #f2811d; */
 }
-.colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(2n) {
+.colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(2n - 1) {
   background-color: #4ad97c;
+  /* background-color: #f28f79; */
 }
-.colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(2n - 1) {
+.colorscheme1 #examplespacer1, .colorscheme1 #examplespacer3, .colorscheme1 .examplebox:nth-child(2n) {
   background-color: #85c8f2;
+  /* background-color: #fff; */
 }
-.colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(2n - 1) {
+.colorscheme2 #examplespacer1, .colorscheme2 #examplespacer3, .colorscheme2 .examplebox:nth-child(2n) {
   background-color: #f2811d;
+  /* background-color: #1ba0f2; */
 }
-.colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(2n - 1) {
+.colorscheme3 #examplespacer1, .colorscheme3 #examplespacer3, .colorscheme3 .examplebox:nth-child(2n) {
   background-color: #f28f79;
+  /* background-color: #4ad97c; */
 }
 #examples .space {padding-bottom:0;}
 
@@ -276,37 +287,45 @@ footer {
 }
 
 @media (min-width: 1400px) {
-  .space {padding: 4em;}
+  .space {
+    padding: 4em
+  }
+  .heroimage {
+    max-height: calc(70vh - 8rem)
+  }
 }
 @media (max-width: 900px) {
   #main {
     grid-template-areas: 'herologo herologo herologo herologo herologo herologo herotext herotext herotext herotext herotext herotext'
     'titles titles titles aboutme aboutme aboutme aboutme aboutme aboutme aboutme aboutme aboutme'
     'examples examples examples examples examples examples examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer1 examplespacer1'
-    'example1 example1 example1 example1 example1 example1 example2 example2 example2 example2 example2 example2'
-    'example3 example3 example3 example3 example3 example3 empty1 empty1 empty1 empty1 empty1 empty1'
-    'empty2 empty2 empty2 empty2 empty2 empty2 contact contact contact contact contact contact'
+    'example0 example0 example0 example0 example0 example0 example1 example1 example1 example1 example1 example1'
+    'example2 example2 example2 example2 example2 example2 example3 example3 example3 example3 example3 example3'
+    'contact contact contact contact contact contact empty2 empty2 empty2 empty2 empty2 empty2'
   }
   #herologo, #herotext {
     height: 50vh;
   }
+  .heroimage {
+    max-height: calc(50vh - 6rem)
+  }
 
-  .colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(4n), .colorscheme1 .examplebox:nth-child(4n - 1) {
+  .colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(4n), .colorscheme1 .examplebox:nth-child(4n - 3) {
     background-color: #fff;
   }
-  .colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(4n), .colorscheme2 .examplebox:nth-child(4n - 1) {
+  .colorscheme2 #examples, .colorscheme2 #examplespacer2, .colorscheme2 .examplebox:nth-child(4n), .colorscheme2 .examplebox:nth-child(4n - 3) {
     background-color: #1ba0f2;
   }
-  .colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(4n), .colorscheme3 .examplebox:nth-child(4n - 1) {
+  .colorscheme3 #examples, .colorscheme3 #examplespacer2, .colorscheme3 .examplebox:nth-child(4n), .colorscheme3 .examplebox:nth-child(4n - 3) {
     background-color: #4ad97c;
   }
-  .colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(4n - 2), .colorscheme1 .examplebox:nth-child(4n - 3) {
+  .colorscheme1 #examplespacer1, .colorscheme1 .examplebox:nth-child(4n - 2), .colorscheme1 .examplebox:nth-child(4n - 1) {
     background-color: #85c8f2;
   }
-  .colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(4n - 2), .colorscheme2 .examplebox:nth-child(4n - 3) {
+  .colorscheme2 #examplespacer1, .colorscheme2 .examplebox:nth-child(4n - 2), .colorscheme2 .examplebox:nth-child(4n - 1) {
     background-color: #f2811d;
   }
-  .colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(4n - 2), .colorscheme3 .examplebox:nth-child(4n - 3) {
+  .colorscheme3 #examplespacer1, .colorscheme3 .examplebox:nth-child(4n - 2), .colorscheme3 .examplebox:nth-child(4n - 1) {
     background-color: #f28f79;
   }
 }
@@ -338,18 +357,23 @@ footer {
 
   #main {
     grid-template-columns: 100%;
-    grid-template-areas: 'herologo'
-    'herotext'
-    'aboutme'
-    'titles'
-    'examples'
-    'example1'
-    'example2'
-    'example3'
-    'contact'
+    grid-template-areas: 
+      'herologo'
+      'herotext'
+      'aboutme'
+      'titles'
+      'examples'
+      'example0'
+      'example1'
+      'example2'
+      'example3'
+      'contact'
   }
   #herologo, #herotext {
     height: auto;
+  }
+  .heroimage {
+    max-height: initial;
   }
   .colorscheme1 #examples, .colorscheme1 #examplespacer2, .colorscheme1 .examplebox:nth-child(2n) {
     background-color: #fff;

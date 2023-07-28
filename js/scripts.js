@@ -10,16 +10,17 @@ function toggleMenu() {
   }
 }
 window.onclick = function(event) {
-  console.log("event.target",event.target);
-  if (!event.target.matches('#nav-list') && !event.target.matches('#nav-menu') && !event.target.matches('#ccsbtn')) {
-    navlist.style.display = "none";
-    navlist.setAttribute('aria-expanded', false);
-  } else if (event.target.matches('#nav-menu')) {
-    toggleMenu()
-  }
+  if (window.innerWidth < 600) {
+		if (!event.target.matches('#nav-list') && !event.target.matches('#nav-menu') && !event.target.matches('#ccsbtn')) {
+			navlist.style.display = "none";
+			navlist.setAttribute('aria-expanded', false);
+		} else if (event.target.matches('#nav-menu')) {
+			toggleMenu()
+		}
+	}
 }
 
-var schemelist = ["colorscheme1","colorscheme2","colorscheme3"];
+var schemelist = ["colorscheme1","colorscheme2"];
 document.getElementById("ccsbtn").addEventListener("click", function(){
 	var cl = document.getElementById("fullwrap").classList;
 	var key, value, result;
