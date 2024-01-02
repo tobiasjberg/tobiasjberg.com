@@ -99,7 +99,7 @@ export default function Home() {
         </section>
       </main>
       <footer className='py-4 px-4 md:px-8'>
-        <p>&copy;2023 Tobias Berg. All rights reserved.</p>
+        <p>&copy;2024 Tobias Berg. All rights reserved.</p>
         <div className='flex justify-center p-4'>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 176"
           className='stroke-darkText dark:stroke-electric fill-none stroke-[8] w-[86px] h-[42px]'>
