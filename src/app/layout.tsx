@@ -17,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-N97KB9YK74" />
-      <GoogleTagManager gtmId="GTM-NBZLVRXP" />
+      <GoogleAnalytics gaId='G-N97KB9YK74' />
+      <GoogleTagManager gtmId='GTM-NBZLVRXP' />
     </html>
   )
 }
