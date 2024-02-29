@@ -13,26 +13,42 @@ export default function Home() {
           <h2 className='text-4xl text-center mb-12'>Examples</h2>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
             <div className=''>
-              <h3 className='text-xl font-bold mb-4'>Breath of the Wild Wiki</h3>
+            <picture>
+              <source srcSet='/images/botw-desktop-screenshot.jpg' media='(min-width: 600px)' />
+              <img src='/images/botw-mobile-screenshot.jpg' alt='Breath of the Wild Wiki screenshot' className='text-xl font-bold mb-4' />
+            </picture>
+              <h3 className='text-2xl font-bold mb-4'>Breath of the Wild Wiki</h3>
               <p className='mb-4'>An unofficial resource for finding information about all of the items you will find in The Legend of Zelda: Breath of the Wild.</p>
               <p className='mb-4'>Tech Stack: Node.js, React.js, Next.js, API Calls, AWS Amplify.</p>
               <a className='inline-block mb-4 mr-4 p-4 bg-electric text-darkText' data-link-type='button' data-button-style='primary' href='https://main.d341xc5hy0q31.amplifyapp.com/' target='_blank'>Take a Look</a>
               <a className='inline-block mb-4 mr-4 p-4 bg-offwhite text-darkText' data-link-type='button' data-button-style='secondary' href='https://github.com/tobiasjberg/botw-items-wiki' target='_blank'>View on GitHub</a>
             </div>
             <div className=''>
-              <h3 className='text-xl font-bold mb-4'>T-Mobile Device Estimator</h3>
+            <picture>
+              <source srcSet='/images/tmo-desktop-screenshot.jpg' media='(min-width: 600px)' />
+              <img src='/images/tmo-mobile-screenshot.jpg' alt='Breath of the Wild Wiki screenshot' className='text-xl font-bold mb-4' />
+            </picture>
+              <h3 className='text-2xl font-bold mb-4'>T-Mobile Device Estimator</h3>
               <p className='mb-4'>Our Agile team created a custom AEM component to function as a form for users to enter their mobile device information to receive an estimated trade-in value. The form’s autocomplete and select options are dynamic based on the user’s previous input values.</p>
               <p className='mb-4'>Tech Stack: HTL, SASS, TypeScript, Alpine.js, Jest, Git.</p>
               <a className='inline-block mb-4 mr-4 p-4 bg-electric text-darkText' data-link-type='button' data-button-style='primary' href='https://www.t-mobile.com/devices/phone-trade-in' target='_blank'>Take a Look</a>
             </div>
             <div className=''>
-              <h3 className='text-xl font-bold mb-4'>TUDOR Collection at TIVOL</h3>
+            <picture>
+              <source srcSet='/images/tudor-desktop-screenshot.jpg' media='(min-width: 600px)' />
+              <img src='/images/tudor-mobile-screenshot.jpg' alt='Breath of the Wild Wiki screenshot' className='text-xl font-bold mb-4' />
+            </picture>
+              <h3 className='text-2xl font-bold mb-4'>TUDOR Collection at TIVOL</h3>
               <p className='mb-4'>TUDOR requested a separate collections page to display their watches that included custom filtering options based on watch attributes.</p>
               <p className='mb-4'>Tech Stack: HTML + Liquid, CSS, JavaScript, jQuery.</p>
               <a className='inline-block mb-4 mr-4 p-4 bg-electric text-darkText' data-link-type='button' data-button-style='primary' href='https://www.tivol.com/collections/tudor' target='_blank'>Take a Look</a>
             </div>
             <div className=''>
-              <h3 className='text-xl font-bold mb-4'>ALICE Preview</h3>
+            <picture>
+              <source srcSet='/images/alice-desktop-screenshot.jpg' media='(min-width: 600px)' />
+              <img src='/images/alice-mobile-screenshot.jpg' alt='Breath of the Wild Wiki screenshot' className='text-xl font-bold mb-4' />
+            </picture>
+              <h3 className='text-2xl font-bold mb-4'>ALICE Preview</h3>
               <p className='mb-4'>I designed and created a landing page for real estate agents to get a preview of a new product offering. The scripts I wrote “slide” the hero from the avatar and title to the video player and back, and open the sample images in a lightbox modal that adapts to any screen size.</p>
               <p className='mb-4'>Tech Stack: HTML, CSS, JavaScript, jQuery.</p>
               <a className='inline-block mb-4 mr-4 p-4 bg-electric text-darkText' data-link-type='button' data-button-style='primary' href='https://alice.reecenichols.com/' target='_blank'>Take a Look</a>
